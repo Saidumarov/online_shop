@@ -1,11 +1,11 @@
 "use client";
-import CustomImage from "@/components/image";
-import { ProductType } from "@/interface";
-import { StarIcon as StarIconOutline } from "@heroicons/react/24/outline";
-import { StarIcon } from "@heroicons/react/24/solid";
+// import CustomImage from "@/components/image";
+// import { ProductType } from "@/interface";
+// import { StarIcon as StarIconOutline } from "@heroicons/react/24/outline";
+// import { StarIcon } from "@heroicons/react/24/solid";
 function ShoppingCart() {
-  const products: ProductType[] =
-    JSON.parse(localStorage.getItem("carts") as string) || [];
+  //   const products: ProductType[] =
+  //     JSON.parse(localStorage.getItem("carts") as string) || [];
   return (
     <div className="h-screen bg-gray-100 pt-20">
       <h1 className="mb-10 text-center text-2xl font-bold">Cart Items</h1>
