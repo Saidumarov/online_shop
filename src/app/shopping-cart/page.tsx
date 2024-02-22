@@ -3,9 +3,16 @@ import CustomImage from "@/components/image";
 import { ProductType } from "@/interface";
 import { StarIcon as StarIconOutline } from "@heroicons/react/24/outline";
 import { StarIcon } from "@heroicons/react/24/solid";
+import { useEffect, useState } from "react";
 function ShoppingCart() {
-  const products: ProductType[] =
-    JSON.parse(localStorage.getItem("carts") as string) || [];
+  const [products, setProducts] = useState<ProductType[]>([]);
+
+  useEffect(() => {
+    const localStorageData = localStorage.getItem("carts");
+    if (localStorageData) {
+      setProducts(JSON.parse(localStorageData));
+    }
+  }, []);
 
   return (
     <div className="h-screen bg-gray-100 pt-20">
