@@ -39,8 +39,8 @@ function Hero() {
           <p className="text-sm mt-2 text-gray-500 mb-8 w-full">
             Neutra shabby chic ramps, viral fixie.
           </p>
-          <div className="flex lg:flex-row md:flex-col">
-            <button className="bg-gray-100 inline-flex py-3 px-5 rounded-lg items-center hover:bg-gray-200 focus:outline-none">
+          <div className="flex lg:flex-row md:flex-col max-[500px]:flex-wrap">
+            <button className="max-[500px]:w-full  bg-gray-100 inline-flex py-3 px-5 rounded-lg items-center hover:bg-gray-200 focus:outline-none ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
@@ -54,7 +54,10 @@ function Hero() {
                 <span className="title-font font-medium">Google Play</span>
               </span>
             </button>
-            <button className="bg-gray-100 inline-flex py-3 px-5 rounded-lg items-center lg:ml-4 md:ml-0 ml-4 md:mt-4 mt-0 lg:mt-0 hover:bg-gray-200 focus:outline-none">
+            <button
+              className="btn max-[500px]:w-full bg-gray-100 inline-flex py-3 px-5 rounded-lg items-center 
+            lg:ml-4 md:ml-0 ml-4 md:mt-4  mt-0 lg:mt-0 hover:bg-gray-200  focus:outline-none "
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"

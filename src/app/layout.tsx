@@ -4,6 +4,7 @@ import "/src/styles/globals.css";
 import Navbar from "@/components/navbar";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Footer from "@/components/footer";
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -22,6 +23,7 @@ export default function RootLayout({
         <Navbar />
         <ToastContainer />
         {children}
+        <Footer />
       </body>
     </html>
   );

@@ -39,7 +39,7 @@ const ShoppingCart = () => {
     const existProduct = products.find((product) => product.id === id);
 
     if (existProduct?.count === 1) {
-      removeProduct(existProduct.id);
+      // removeProduct(existProduct.id);
     } else {
       const updatedCart = products.map((product) => {
         if (product.id === id) {
@@ -70,8 +70,10 @@ const ShoppingCart = () => {
   return (
     <>
       {products.length ? (
-        <div className="h-screen bg-gray-100 pt-20">
-          <h1 className="mb-10 text-center text-2xl font-bold">Cart Items</h1>
+        <div className="h-screen  pt-20">
+          <h1 className="mb-10 text-center text-2xl font-bold pt-10">
+            Cart Items
+          </h1>
           <div className="mx-auto max-w-5xl justify-center px-6 md:flex md:space-x-6 xl:px-0">
             <div className="rounded-lg md:w-2/3">
               {products.map((product) => (
@@ -125,26 +127,24 @@ const ShoppingCart = () => {
                     </div>
                     <div className="mt-4 flex justify-between sm:space-y-6 sm:mt-0 sm:block sm:space-x-6">
                       <div className="flex items-center border-gray-100">
-                        <span
+                        <button
                           className="cursor-pointer rounded-l bg-gray-100 py-1 px-3.5 duration-100 hover:bg-blue-500 hover:text-blue-50"
                           onClick={() => handleDecrement(product.id)}
                         >
-                          {" "}
-                          -{" "}
-                        </span>
+                          -
+                        </button>
                         <input
                           className="h-8 w-8 border bg-white text-center text-xs outline-none"
                           type="number"
                           value={product.count}
                           min="1"
                         />
-                        <span
+                        <button
                           className="cursor-pointer rounded-r bg-gray-100 py-1 px-3 duration-100 hover:bg-blue-500 hover:text-blue-50"
                           onClick={() => handleIncrement(product.id)}
                         >
-                          {" "}
-                          +{" "}
-                        </span>
+                          +
+                        </button>
                       </div>
                       <div className="flex items-center space-x-4">
                         <p className="text-sm">

@@ -15,3 +15,16 @@
     margin: 0;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .btn {
+    margin: 0;
+    margin-top: 15px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .nav {
+    display: none;
+  }
+}

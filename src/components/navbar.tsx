@@ -22,12 +22,15 @@ function Navbar() {
         <h3 className=" px-3 cursor-pointer"> Online-shop</h3>
       </Link>
       <div className=" flex items-center space-x-2.5 text-sm">
-        <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
+        <nav className="nav md:ml-auto flex flex-wrap items-center text-base justify-center max-[700px]:object-none">
           <Link href={"/"} className="mr-5 hover:text-gray-900">
             Home page
           </Link>
           <Link href={"/products"} className="mr-5 hover:text-gray-900">
             All products
+          </Link>
+          <Link href={"/contacts"} className="mr-5 hover:text-gray-900">
+            Contacts
           </Link>
         </nav>
         <Link href={"/shopping-cart"}>
